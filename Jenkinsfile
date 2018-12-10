@@ -11,9 +11,5 @@ node {
         sh 'curl –H "Content-Type: text/xml" --data-binary @importardatapower.xml https://192.168.1.74:5550/service/mgmt/current -u admin:admin123 -k'
   }
   
-  stage('Results') {
-sh""
-     junit '**/target/surefire-reports/TEST-*.xml'
-     archive 'target/*.jar'
-  }
+  
 }
