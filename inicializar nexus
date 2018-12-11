@@ -1,0 +1,6 @@
+ir a carpeta de descargas
+sudo chmod 777 nexus-latest-bundle.zip
+sudo unzip nexus-2.14.10-01-bundle.zip
+cd nexus-2.14.10-01/bin
+sudo RUN_AS_USER=root ./nexus start
+http://127.0.0.1:8081/nexus/#welcome

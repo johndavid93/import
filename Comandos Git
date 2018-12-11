@@ -1,0 +1,76 @@
+git clone "copiar HTTPS" // clonar el git, se debe tener una carpeta contenedora es decir crear una carpeta carpeta 
+
+github
+para crear y subir archivos a un nuevo repositorio de github
+ir a la carpeta donde esta el proyecto 
+git init
+git add .
+git commit -m 'mensaje'
+git remote add origin + http_delgit_repositorio
+git push -u origin master
+
+git 
+git
+git status ---- ver el estato de la rama 
+rm nombre.extencion // borrar fichero
+git add nombre.extencion // agregar a staying
+git add -A // agragar todo lo que esta en working directory al staying
+git rm --cached nombre.extencion   // quitar archivos del staying
+touch nombre.extencion // crear archivos
+clear // limpiar terminalgit 
+git rm -f nombre.extencion // sacarlos y borrarlos de staying
+git add -n nombre.extencion // confirma si el archivo existe en el directorio
+
+pasar archivos al repositorio
+
+git commint -m 'mensaje de cambios agregados' // subir los cambios hechos 
+git log // ver los commit que tengo agregados
+git tag   // etiquetas para git existen dos tipos las ligeras y las anotadas
+git tag -a 0.1 -m 'version estable del proyecto' // la etiqueta ligeras generalmente son la version 
+git tag -l    // ver lista de tag
+git tag 0.3 773a6cb71b9312f386b3fbecee3ea20f840d935f // etiqueta ligera, el numero lo tome de la lista de tag
+git tag -d version_a_borrar // borrar etiqueta
+git tag -f -a nueva_version -m 'mensaje que deseo' // renombrar version
+git log --oneline  // resume el log de forma mas pequena
+// personalizar git log
+git log --oneline --graph // git log con multiples parametros grafico
+git log -numero // me muestra el log que estoy llamando con el numero
+
+git diff codigo_tomado_del_resumen  // me muestra los cambios que ubo entro el commit de la que tome el codigo a la que tengo en la actulidad
+git diff codigo_tomado_del_resumen codigo_tomado_del_resumen // compara las diferencias entre los dos commit 
+git reset --soft codigo_commit  // desde que commit queremos quitar los cambios
+git reset --mixed  codigo_commit // quitar los commits y quitar los archivos que estaban en los commits 
+git reset --hard   // borrar los commit del stage
+git reset --hard codigo_commit  // reinicia todo hasta el commit del codigo que tomamos
+
+git branch nombrederama // crear ramas
+git branch -l // listar ramas
+git branch -d nombrederama // borrar ramas simpre que este vacia
+git branch -D nombrederama // borrar ramas
+git branch - m nombrederama nuevonombre // renombrar rama
+
+git checkout nombrerama    // moverse a una rama determinada
+git checkout nombreramaanterior	// devolverse a la rama anterior
+git checkout codigocommit   //  movernos a un commit
+
+git checkout -b nombrerama // crear una nueva rama e ingresa a esta.
+git checkout -- nombrearhivo.extencion // descartar los cambios en el archivo 
+git merge nombrederama  // se debe estar primero en la rama master,mezcla la rama que ponemos con la que estamemos situados
+
+git log --online --graph  // 
+git rebase // cambiar la historia del proyecto
+
+IMPORTANTE**
+la mejor es merge porque no interfiere con lo que trabajan los demas
+
+git stage // guarda estado en el limbo // guarda cambios temporalmente en las ramas
+git stage list  // ver lista de stage que se tengan 
+git stash drop strash@{1}// eliminar el stage puedo tomarlos de la lista
+git stage apply //aplicar el ulitmo cambio el de el valor {#}
+git stage apply stash@{#}  // aplicar cambio del stash que queremos
+
+
+git cherry-pick d5491c5 // mueve el archivo seleccionado a la rama donde estemos el coodigo tomado del resumen de log
+
+
+

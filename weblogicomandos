@@ -1,0 +1,4 @@
+https://geekflare.com/oracle-weblogic-installation-guide/
+Descargas/fmw_12.2.1.3.0_wls_quick_Disk1_1of1/wls12213/oracle_common/common/bin$ ./config.sh
+Descargas/fmw_12.2.1.3.0_wls_quick_Disk1_1of1/wls12213/user_projects/domains/new_domain/bin ./startWebLogic.sh 
+

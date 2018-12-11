@@ -1,0 +1,40 @@
+sudo docker search -- buscar imagenes en 
+sudo docker pull --- descargar una imagen
+sudo docker images --- listar imagenes
+sudo docker version -- ver version de docker
+sudo docker pull imagen:tags --- version determinada de una imagen  
+sudo docker run -- Crear contenedores y ejecutar comandos dentro del contenedor 
+sudo docker ps ---- para saber que contenedores esta en ejecucion 
+sudo docker ps -a --- ver todos los contenedores creados que se estan ejecutando y los que no y la hora de creacion
+sudo docker rm nombre del contenedor --- eliminar los contenedores existentes
+sudo docker run -i -t nombre del contenedor + bash ---- ejecutar ordenes dentro del container ejemplo sudo docker run -i -t ubuntu bash
+--help -- se debe poner despues del comando de eejcucion de docker para que muestre que accion hace ese comando.
+exit -- para salir de un contenedor determinado
+sudo docker stop + id del contenedor --- detener un contenedor ejemplo: --- sudo docker stop 009607da2f6f
+sudo docker run -i -t ubuntu bash---- bandera o parametro -i para que nos deje ingresar contenido en nuestro contenedor y -t para poder tener una terminal en este 
+touch nombre del archivo--- crear un archivo dentro de un contenedor 
+sudo docker start + id del contenedor --- inicia de nuevo el contenedor -- ejemplo: sudo docker start 009607da2f6f  
+sudo docker attach + id del contenedor--- entrar de nuevo al contenedor -- ejemplo: sudo docker attach 009607da2f6f 
+sudo docker run --name nombredelcontenedor -it imagen ---- dar un nombre al contenedor --ejemplo sudo docker run --name krathos -it ubuntu
+ctrl =pq --- presionando estas teclas podemos salir del contenedor sin detenerlo
+apt-get update -- para actualizar los paquetes dentro de un contenedor antes de instalar paquetes dentro del contenedor 
+sudo docker commit = id del contenedor = nombrenueva imagen --- crear una imagen a apatir de un contenedor.
+gedit --- abre un editor de texto  
+sudo docker build -t +nombre de la imagen + /ubicacion/archivo/ = construye una imagen apartir del Dockerfile 
+sudo docker run -d -p +nombre de la imagen --- crea un contenedor con un puerto especifico, ejemplo sudo docker -d -p 1000:80 miweb
+-------------------------------------------------
+			Dockerfile contenido 
+FROM: Define una imagen base para crear una nueva imagen
+FROM ubuntu:18.04 
+MAINTAINER Hace referencia de quien es el creador del archivo
+MAINTAINER JOHND
+RUN: ejecuta todos los comandos dentro del archivo
+RUN apt-get update && apt-get install apache2 
+ADD/COPY Permite agregar o copiar archivos desde el equipo local a la imagen
+ADD index.html var/www/html
+EXPOSE Nos permite xponer por defecto un puerto para el contenedor 
+EXPOSE 8080
+CMD: Ejecutar accion por defecto al crear el contenedor, es la finalidad 
+CMD ["/usr/sbin/apache2", "-D", "FOREGROUND"]
+
+----------------------------------------------
