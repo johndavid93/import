@@ -1,0 +1,47 @@
+curl –H "Content-Type: text/xml" --data-binary @createDeveloperResources.xml https://192.168.1.47:5550/service/mgmt/current -u admin:admin123 -k 
+
+curl –H "Content-Type: text/xml" --data-binary @saveConfig.xml https://192.168.1.47:5550/service/mgmt/current -u admin:admin123 -k
+
+C:>curl --data-binary @SOMAActiveUsers.xml https://192.168.1.47:5550/service/mgmt/current -u admin:admin123 -k
+
+scp linea-de-comandos.txt admin@192.168.1.16:.
+
+curl –H "Content-Type: text/xml" --data-binary @backup-domain.xml https://192.168.1.16:5550/system/filemaintenance/local/studentnn_domain -u admin:admin123 -k 
+
+curl –H "Content-Type: text/xml" --data-binary @backup-domain.xml https://192.168.1.16:5550/system/filemaintenance/local/studentnn_domain -u admin:admin123 -k 
+
+ curl –-upload-file "backup-domain.xml" https://192.168.1.16:5550/system/filemaintenance/local/studentnn_domain -u admin:admin123 -k
+
+curl –H "Content-Type: text/xml" --data-binary @backup-domain.xml https://192.168.1.16:5550/system/dpViewer/studentnn_domain -u admin:admin123 -k
+
+scp backup-domain.xml admin:admin123@/system/dpViewer/studentnn_domain:.
+
+
+//para subir archivo.zip a datapower por consola
+curl –H "Content-Type: text/xml" --data-binary @importardatapower.xml https://192.168.1.16:5550/service/mgmt/current -u admin:admin123 -k
+decodificar paquete de archivos.zip a base 64 link https://www.motobit.com/util/base64-decoder-encoder.asp
+codificar paquete de archivos.zip a base 64 link https://www.browserling.com/tools/file-to-base64
+
+>mvn compile
+>mvn package
+>mvn deploy
+
+-mvn release:clean
+-mvn release:prepare
+-mvn deploy
+
+curl -v -u admin:admin123 --upload-file SMEScoreWS.zip http://169.62.240.152:8081/repository/datare/
+
+
+
+mvn deploy: deploy-file -DgroupId = com.somecompany -DartifactId = project -Dversion = 1.0.0 -DgeneratePom = true -Dpackaging = zip -DrepositoryId = nexus -Durl = http://169.62.240.152:8081/repository/datare/ -Dfile = target / SMEScoreWS.zip
+
+deploy:deploy-file\ -Durl=http://169.62.240.152:8081/repository/datare\-DrepositoryId=objeto1\-DgroupId=org.myorg\-DartifactId=myproj\-Dversion=1.2.3\-Dpackaging=zip\-Dfile=SMEScoreWS.zip
+
+curl -v \  "r=releases" \ -F "g=com.acme.widgets" \ "a=widget" \ "v=0.1-1" \ "p=zip" \ "file=@.SMEScoreWS.zip/" \ -u admin:p4ssw0rd \ http://169.62.240.152:8081/repository/datare/
+
+
+curl -v \ -F "r=releases" \ -F "g=com.proyecdp.demo" \ -F "a=proyectodp" \ -F "v=1.0" \ -F "p=zip" \ -F "file=@SMEScoreWS.zip" \ -u admin:p4ssw0rd \ http://localhost:8081/nexus/service/local/artifact/maven/content 
+
+
+
