@@ -11,6 +11,10 @@ el .conf tendra la configuracion de twitter como credenciales nombre del index (
 
 el .json solo se cambiara el nombre "index_patterns": "debe coincidir con el nombre del configurado previamente en el .conf"
 
+despues de debe lanzar estos archivos para este caso estamos ubicados en la carpeta /Descargas/logstash-6.6.0/bin/informacion
+que es la ubicacion de donde estan dichos archivos y se lanza el siguiente comando 
+/home/devops/Descargas/logstash-6.6.0/bin/logstash -f twitter_logstash.conf
+que es la ubicacion donde esta el archivo logstash y -f con el archivo.conf
 al entrar en la interfaz grafica de kibana e ir en la seccion de managenent podemos evidenciar que el index se subio correctamente en Index Management
 - despues se debe crear un nuevo index con el mismo nombre de los archivos anteriormente configurados (.conf, .json) en la parte Index Patterns
  
