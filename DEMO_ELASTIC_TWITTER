@@ -1,0 +1,22 @@
+DEMO ELASTIC con twitter
+Primero se lanza el ejecutable de elastic por medio del comando ./elastic y ubicados en la carpeta bin
+despues se lanza kibana en la carpeta bin ./kivana
+y por ultimo logstash en la carpeta bin ./logstats 
+
+en este ultimo se crea una nueva carpeta que contendra dos archivos pueden llevar cualquier nombre siempre y cuando termine en la extension .conf
+y .json 
+
+el .conf tendra la configuracion de twitter como credenciales nombre del index (resaltando que deben tener el mismo nombre tanto el index como template_name ), el nombre del host y la keywords donde se modifica la palabra o la frase que se quiere buscar por ejemplo keywords=> [ "BOGOTA"]
+ .
+
+el .json solo se cambiara el nombre "index_patterns": "debe coincidir con el nombre del configurado previamente en el .conf"
+
+al entrar en la interfaz grafica de kibana e ir en la seccion de managenent podemos evidenciar que el index se subio correctamente en Index Management
+- despues se debe crear un nuevo index con el mismo nombre de los archivos anteriormente configurados (.conf, .json) en la parte Index Patterns
+ 
+ - En la parte de discover podemos evidenciar que esta recibiendo los datos segun la palabra configurada 
+
+en la parte de visualize se configurara lo que se quiere mostrar (graficas aplicando filtros segun lo que se quiere graficar)
+y en la parte de dashboard se vera todos los graficas segun los graficos que se desean ver
+
+
