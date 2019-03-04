@@ -1,0 +1,11 @@
+comandos vagrant 
+ vagrant box add NOMBRE ----- AÑADIR UNA CAJA 
+ vagrant box list ----- LISTAR TODAS LAS CAJAS
+ vagrant box prune---- elimina las versiones antiguas de las cajas instaladas. Si la caja está actualmente en uso vagrant le pedirá confirmación.
+ vagrant box remove NAME ---- ELIMINA LA CAJA DEFINITIVAMENTE 
+ vagrant box update ---- actualiza el cuadro para el entorno actual de Vagrant si hay actualizaciones disponibles
+ vagrant halt ---- APAGAR MAQUINA VIRTUAL
+ vagrant up ---- ENVIAR MAQUINA VIRTUAL 
+ vagrant init --- se crea una nueva carpeta y se ejecuta este comando para que se cree por defecto un vagranfile
+ vagrant reload --- Actualizar modificaciones de vagranfile
+ vagrant destroy NOMBRE ---- ELIMINA MAQUINA VIRTUAL
